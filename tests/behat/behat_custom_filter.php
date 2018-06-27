@@ -30,8 +30,7 @@ require_once(__DIR__ . '/behat_custom_base.php');
 class behat_custom_filter extends behat_custom_base {
     /**
      * Turns MathType filter on in 'Manage Filters' menu
-     *
-     * @Given /^I turn filter on "(?P<element_string>(?:[^"]|\\")*)"$/
+     * @Given I turn :arg filter on
      *
      * @throws  Behat\Mink\Exception\ElementNotFoundException If $xpathnumber is not correctly computed.
      */
@@ -48,7 +47,8 @@ class behat_custom_filter extends behat_custom_base {
     public function i_set_the_field($field, $alt)
     {
         $mathml = $this->alternative_to_mathml($alt);
-        $this->set_field_value($field, $value);
+        $this->execute('behat_forms::i_set_the_field_to', array($field, $mathml));
+        //$this->set_field_value($field, $mathml);
     }
 
     /**

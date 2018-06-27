@@ -22,7 +22,7 @@ Feature: Turn filter on
 
       @javascript
   Scenario: Turn filter on using custom methods
-    When I turn filter on "MathType by WIRIS"
+    When I turn "MathType by WIRIS" filter on
     And I open my profile in edit mode
     And I click on "HTML" "button"
     And I set the field "Description" to mathml "1 half"
