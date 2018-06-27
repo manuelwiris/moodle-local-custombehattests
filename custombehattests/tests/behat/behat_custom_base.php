@@ -39,7 +39,7 @@ class behat_custom_base extends behat_base {
      * @throws   Exception If alternative is not recognized
      */
     protected function alternative_to_mathml($alt){
-        if($alt == "1 half") return self::$MATHML;
+        if($alt == "1 half") return self::MATHML;
         throw new \Exception('Alternative text not recognized');
     }
 
