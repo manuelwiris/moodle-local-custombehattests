@@ -42,20 +42,17 @@ class behat_custom_filter extends behat_custom_base {
 
 
      /**
-     * @Given I set the field :field to mathml :alt
-     */
-    public function i_set_the_field($field, $alt)
-    {
+      * @Given I set the field :field to mathml :alt
+      */
+    public function i_set_the_field($field, $alt) {
         $mathml = $this->alternative_to_mathml($alt);
         $this->execute('behat_forms::i_set_the_field_to', array($field, $mathml));
-        //$this->set_field_value($field, $mathml);
     }
 
     /**
      * @Then I should see MathType image :alt
      */
-    public function i_should_see_image($alt)
-    {
+    public function i_should_see_image($alt) {
         $element = "//img[@alt='$alt']";
         // Getting Mink selector and locator.
         list($selector, $locator) = $this->transform_selector("xpath_element", $element);

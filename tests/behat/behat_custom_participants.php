@@ -28,7 +28,7 @@ require_once(__DIR__ . '/behat_custom_base.php');
  */
 class behat_custom_participants extends behat_custom_base {
 
-        /**
+    /**
      * From participants menu show students who's firstname begin with letter 'letter'
      *
      * @When I check the students with firstname beginning with :letter
@@ -42,7 +42,8 @@ class behat_custom_participants extends behat_custom_base {
         $node->click();
     }
 
-       /**
+
+    /**
      * From participants menu show students who's lastname begin with letter 'letter'
      *
      * @When I check the students with lastname beginning with :letter

@@ -23,6 +23,14 @@ Feature: Look for students
     Scenario: Check students beginning with A with myFunc
       When I am on "Course 1" course homepage
       And I navigate to course participants
+      And I click on "(//li[@class='page-item A'])[1]" "xpath_element"
+      Then I should see "AStudent"
+      And I should not see "BStudent"
+
+    @javascript
+    Scenario: Check students beginning with A with myFunc
+      When I am on "Course 1" course homepage
+      And I navigate to course participants
       And I check the students with firstname beginning with "A"
       Then I should see "AStudent"
       And I should not see "BStudent"
