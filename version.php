@@ -27,6 +27,6 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version = 2018062000;
-$plugin->requires = 2011060313;
+$plugin->requires = 2017051500;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->component = 'local_custombehattests';
